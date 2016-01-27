@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fontsStyles.css">
+	<style>
+		
+		/* entire container, keeps perspective */
+		.flip-container {
+			perspective: 1000;
+		}
+			/* flip the pane when hovered */
+			.flip-container:hover .flipper, .flip-container.hover .flipper {
+				transform: rotateY(180deg);
+			}
+
+		.flip-container, .front, .back {
+			width: 320px;
+			height: 480px;
+		}
+
+		/* flip speed goes here */
+		.flipper {
+			transition: 0.6s;
+			transform-style: preserve-3d;
+			position: relative;
+		}
+
+		/* hide back of pane during swap */
+		.front, .back {
+			backface-visibility: hidden;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		/* front pane, placed above back */
+		.front {
+			z-index: 2;
+			/* for firefox 31 */
+			transform: rotateY(0deg);
+		}
+
+		/* back, initially hidden pane */
+		.back {
+			transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body>
+
+		<!-- <div id="homePageIntro">
+			<div class="floatLeft">
+				<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/08/homePageInfoLeftPannel.png" alt="This is banner image for the welcome message for Special Education Support Center">
+			</div>
+			<div class="floatLeft">
+				<h2>Welcome to Special Education Support Center</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio sed quos tenetur earum, culpa quo. Architecto itaque, quibusdam quam odit nam molestias quas, error cupiditate dolor minus libero, id veniam?</p>
+				<p>Recusandae, harum. Natus quod, illum, magni id sit facilis possimus harum distinctio blanditiis recusandae quia. Distinctio magni quasi accusamus quae, voluptas nemo et suscipit vel, tempora amet sed, asperiores provident.</p>
+			</div>
+			<div class="floatLeft">
+				<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/08/homePageInfoRightPannel.png" alt="This is banner image for the welcome message for Special Education Support Center">
+			</div>
+			<div class="clearBoth"></div>
+			<div class="homePageIntroSubbanner">
+				<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/08/homePageInfoSubBanner.png" alt="This is a vector image of two triangles for the home page introduction for Special Education Support Center">
+			</div>
+		</div>
+		<div class="clearBoth"></div> -->
+<div id="homePage">
+	
+	<div class="section">
+	  	<div id="homeResources">
+	    	<div class="homeResourceFlippers">
+		    	<div class="flip-container" id="flip-container1">
+					<div class="flipper">
+						<div class="front">
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/supportForEducators.jpg" alt=" for the Special Education Support Center website">
+							<h3>Support for Educators</h3>
+						</div>
+						<div class="back">
+							<p>We provide resources andtraining to help educators provide learning activities &amp; experiences appropriate to the unique gifts and needs of students with disabilities.</p>
+							<div class="pagesButton">
+						        <a href="">Learn More</a>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/supportForFamilies.jpg" alt="This is a PNG of a government building for the Special Education Support Center website">
+							<h3>Support for Families</h3>
+						</div>
+						<div class="back">
+							<p>We offer both direct and indirect support to families in order that they can be effective and empowered partners in the education of the children in their care.</p>
+							<div class="pagesButton">
+						        <a href="">Learn More</a>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/supportForStudents.jpg" alt="This is a PNG for the Special Education Support Center website">
+							<h3>Support for Students</h3>
+						</div>
+						<div class="back">
+							<p>We maintain a library of resources of interest to students with disabilities, and anyone supporting their efforts to be active learners in school and the transition to adult life.</p>
+							<div class="pagesButton">
+						        <a href="">Learn More</a>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/stateNeedProjects.jpg" alt="This is a PNG of a government building for the Special Education Support Center website">
+							<h3>State Needs Projects</h3>
+						</div>
+						<div class="back">
+							<p>We are one of 6 OSPI Special Education State Needs Projects that provide capacity building for parents, families, and educators.</p>
+							<div class="pagesButton">
+						        <a href="http://specialeducationsupportcenter.net/resources/state-needs-projects/">Learn More</a>
+						    </div>
+						</div>
+					</div>
+				</div>
+	    	</div> 
+	    	<div class="clearBoth"></div>
+	    	<div class="homeResourceFlippers">
+		    	<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/IDEA.jpg" alt="">
+							<h3>All About IDEA</h3>
+						</div>
+						<div class="back">
+							<p>Learn how the Individuals with Disabilities Education Act (IDEA) ensures services to children with disabilities and governs how states and public agencies provide services.</p>
+							<div class="pagesButton">
+						        <a href="http://specialeducationsupportcenter.net/resources/idea/">Learn More</a>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/disabilityCategories.jpg" alt="This is a PNG of a set of classic weighing scales for Special Education Support Center">
+							<h3>Disability Categories</h3>
+						</div>
+						<div class="back">
+							<p>Access information and resources related to the 13 disability categories defined by IDEA that are used to determine whether students qualify for special education services.</p>
+							<div class="pagesButton">
+								<a href="http://specialeducationsupportcenter.net/resources/disability-categories/">Learn More</a>
+							</div>
+				        </div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/agenciesAdvos.jpg" alt="for Special Education Support Center">
+							<h3>Agencies &amp; Advocates</h3>
+						</div>
+						<div class="back">
+							<p>Locate the agencies and advocacy organizations that provide valuable resources and are indispensible allies on behalf of special ed policy and practice.</p>
+							<div class="pagesButton">
+								<a href="http://specialeducationsupportcenter.net/resources/resources-families/">Learn More</a>
+							</div>
+				       	</div>
+					</div>
+				</div>
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							
+							<img src="http://specialeducationsupportcenter.net/wp-content/uploads/2015/10/joinTheCommunity.jpg" alt="">
+							<h3>Join the Community</h3>
+						</div>
+						<div class="back">
+							<p>Learn about the many ways you can participate and help build this virtual learning community.</p>
+							<div class="pagesButton">
+								<a href="http://specialeducationsupportcenter.net/resources/resources-students/">Learn More</a>
+							</div>
+				        </div>
+					</div>
+				</div>
+	    	</div>
+		</div>
+	</div>
+	<div class="clearBoth"></div>
+</div>
+	
+</body>
+</html>
+

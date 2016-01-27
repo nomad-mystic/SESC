@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Instructional Page Nav Left</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fontsStyles.css">
+</head>
+<body>
+	<div id="instructionalPageNav">
+	    <div>
+		    <a href="http://specialeducationsupportcenter.org/instructional-support/">
+		    	<h4 class="instructionalPageNavH4">
+		    		Instructional Support
+		    	</h4>
+		    </a>
+	    </div>
+	    <div class="schoolResourcesNavDiv">
+	        
+	        <a href="#">
+	        	<h4>
+		        	Educators’ Toolbox
+					<span aria-hidden="true"  class="floatRight flaticon-right39"></span>
+				</h4>
+	        </a>
+	        
+	        <div class="schoolResourcesNavContent navDivLevelTwoContent">
+	        	<a href="http://specialeducationsupportcenter.org/instructional-support/educators-toolbox/">
+	        		<div class="navDivLevelTwoItem schoolResourcesNavParent">
+		        		Educators’ Toolbox
+					</div>
+	        	</a>
+				<a href="http://specialeducationsupportcenter.org/instructional-support/educators-toolbox/educators/">
+					<div class="navDivLevelTwoItem">
+						Teachers 
+					</div>
+				</a>
+				<a href="http://specialeducationsupportcenter.org/instructional-support/educators-toolbox/esa/">
+					<div class="navDivLevelTwoItem">
+						ESA 
+					</div>
+				</a>
+				<a href="http://specialeducationsupportcenter.org/instructional-support/educators-toolbox/para-prof/">
+					<div class="navDivLevelTwoItem">
+						Para Professional
+					</div>
+				</a>
+				<a href="http://specialeducationsupportcenter.org/instructional-support/educators-toolbox/administrators/">
+					<div class="navDivLevelTwoItem">
+						Administrators
+					</div>
+				</a>
+	        </div>
+	    </div>
+        <div>
+            <a href="http://specialeducationsupportcenter.org/instructional-support/classes">
+                <h4 class="classesParent">
+                    Classes
+                </h4>
+            </a>
+        </div>
+        <div>
+            <a href="http://specialeducationsupportcenter.org/instructional-support/classes/bootcamps/">
+                <h4>
+                    Bootcamps
+                </h4>
+            </a>
+        </div>
+        <div>
+            <a href="http://specialeducationsupportcenter.org/instructional-support/classes/extensions/">
+                <h4>
+                    Extensions
+                </h4>
+            </a>
+        </div>
+		<div>
+			<a href="http://specialeducationsupportcenter.org/instructional-support/library/">
+				<h4>
+					Library
+				</h4>
+			</a>
+		</div>
+        <div>
+            <?php
+			   if(current_user_can('author') || current_user_can('administrator') || current_user_can('editor') || current_user_can('teacher')) {
+				    echo	'<a href="http://specialeducationsupportcenter.org/instructional-support/cadres-corner/">';
+                    echo '<h4>Cadres Corner</h4>' . '</a>';
+            	}
+            ?>
+        </div>
+        <div>
+            <?php
+			   if(current_user_can('author') || current_user_can('administrator') || current_user_can('editor') || current_user_can('teacher')) {
+				    echo	'<a href="http://specialeducationsupportcenter.org/instructional-support/file-cabinet/">';
+            		echo '<h4>Your file manager</h4>' . '</a>';
+            	}
+            ?>
+        </div>
+    </div>
+
+	
+</body>
+</html>
+<!--<?php-->
+<!--if( current_user_can('author') || current_user_can('administrator') || current_user_can('edtor') ) {-->
+<!--echo '<a href="http://specialeducationsupportcenter.org/instructional-support/training/training-modules/">';-->
+<!--echo '<div class="navDivLevelTwoItem">';-->
+<!--echo '<span aria-hidden="true"  class="navIconLevelTwo">' . '</span>';-->
+<!--echo 'Training Modules';-->
+<!--echo '</div>';-->
+<!--} ?>-->
