@@ -21,39 +21,23 @@ function my_login_redirect( $url, $request, $user ){
 }
 add_filter('login_redirect', 'my_login_redirect', 10, 3 );
 
-/* This is going to add a Navigation widget to the top of the page*/
-function top_nav_widgets_init() {
-
-	register_sidebar( array(
-		'name'          => 'Top Navigation Area',
-		'id'            => 'top_nav',
-		'before_widget' => '<div id="topNav" class="floatRight">',
-		'after_widget'  => '</div>',
-		'before_title'  => '',
-		'after_title'   => '',
-	) );
-
-}
-add_action( 'widgets_init', 'top_nav_widgets_init' );
-
 /*-------this is going to be the navigation for the cadreArea Page-----*/
-function cadre_area_nav_widgets_init() {
-
-	register_sidebar( array(
-		'name'          => 'Cadre Area Page Nav Left Col',
-		'id'            => 'cadre_area_page_nav',
-		'before_widget' => '<div id="cadreAreaNav">',
-		'after_widget'  => '</div>',
-		'before_title'  => '',
-		'after_title'   => '',
-	) );
-
-}
-add_action( 'widgets_init', 'cadre_area_nav_widgets_init' );
+//function cadre_area_nav_widgets_init() {
+//
+//	register_sidebar( array(
+//		'name'          => 'Cadre Area Page Nav Left Col',
+//		'id'            => 'cadre_area_page_nav',
+//		'before_widget' => '<div id="cadreAreaNav">',
+//		'after_widget'  => '</div>',
+//		'before_title'  => '',
+//		'after_title'   => '',
+//	) );
+//
+//}
+//add_action( 'widgets_init', 'cadre_area_nav_widgets_init' );
 
 /* This is going to add a Cadre Log in Area for members on the Cadre Page*/
 function cadre_login_widgets_init() {
-
 	register_sidebar(array(
 		'name'          => 'Cadre Log In Page',
 		'id'            => 'cadre_login',
@@ -61,13 +45,11 @@ function cadre_login_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
-	) );
-
+	));
 }
 add_action( 'widgets_init', 'cadre_login_widgets_init' );
 /* This is going to add a File Cabinet Area for members on the File Cabinet Page*/
 function cadre_file_cabinet_widgets_init() {
-
 	register_sidebar(array(
 		'name'          => 'Cadre File Cabinet Page',
 		'id'            => 'cadre_file_cabinet',
@@ -75,8 +57,7 @@ function cadre_file_cabinet_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
-	) );
-
+	));
 }
 add_action( 'widgets_init', 'cadre_file_cabinet_widgets_init' );
 /*-------------This is going to be the Projects Page left Col Widget area---------*/
@@ -167,7 +148,7 @@ function news_custom_post() {
 }
 add_action( 'init', 'news_custom_post');
 /*---------------This for the resources custom post type----*/
-if ( ! function_exists('resources_custom_post') ) {
+if (!function_exists('resources_custom_post')) {
 
 // Register Custom Post Type
 function resources_custom_post() {
@@ -208,39 +189,39 @@ function resources_custom_post() {
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
 	);
-	register_post_type( 'resources_post', $args );
+	register_post_type('resources_post', $args);
 
 }
-add_action( 'init', 'resources_custom_post', 0 );
+add_action('init', 'resources_custom_post', 0);
 
 }
 /*//////////////////////This is all the resource page rightAside widgets----*/
 /* This is for the custom-post-deaf-blindness template*/
-function deaf_blindness_widgets_init() {
+//function deaf_blindness_widgets_init() {
+//
+//	register_sidebar( array(
+//		'name'          => 'Deaf Blindness Right Aside',
+//		'id'            => 'deaf_blindness_right_widget',
+//		'before_widget' => '<div id="deafBlindnessWidget">',
+//		'after_widget'  => '</div>',
+//		'before_title'  => '',
+//		'after_title'   => '',
+//	) );
+//
+//}
+//add_action( 'widgets_init', 'deaf_blindness_widgets_init' );
 
-	register_sidebar( array(
-		'name'          => 'Deaf Blindness Right Aside',
-		'id'            => 'deaf_blindness_right_widget',
-		'before_widget' => '<div id="deafBlindnessWidget">',
-		'after_widget'  => '</div>',
-		'before_title'  => '',
-		'after_title'   => '',
-	) );
-
-}
-add_action( 'widgets_init', 'deaf_blindness_widgets_init' );
-
-/*-------------------change the length of the post exerpt---*/
-function custom_excerpt_length( $length ) {
+/*-------------------change the length of the post excerpt---*/
+function custom_excerpt_length($length) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-/////THis is for removing register from the Woothemes Sensei my courses page
+/////This is for removing register form the Woothemes Sensei my courses page
 global $woothemes_sensei;
-remove_action( 'sensei_login_form', array( $woothemes_sensei->frontend, 'sensei_login_form' ), 10 );
+remove_action('sensei_login_form', array($woothemes_sensei->frontend, 'sensei_login_form'), 10);
 
-add_action( 'sensei_login_form', 'custom_sensei_login_form' , 10 );
+add_action('sensei_login_form', 'custom_sensei_login_form' , 10);
 
 function custom_sensei_login_form() {
 	global $woothemes_sensei;
@@ -251,8 +232,8 @@ function custom_sensei_login_form() {
 
 		<div class="col-1">
 			<?php
-			// output the actul form markup
-			$woothemes_sensei->frontend->sensei_get_template( 'user/login-form.php');
+			// output the actual form markup
+			$woothemes_sensei->frontend->sensei_get_template('user/login-form.php');
 			?>
 		</div>
 	</div>
@@ -260,8 +241,8 @@ function custom_sensei_login_form() {
 
 	<?php
 } // End custom_sensei_login_form()
-// THis is going to rename the complete lesson button on lesson-meta.php
-add_filter( 'sensei_complete_lesson_text', 'sensei_custom_complete_lesson_text', 10 );
+// This is going to rename the complete lesson button on lesson-meta.php
+add_filter('sensei_complete_lesson_text', 'sensei_custom_complete_lesson_text', 10);
 
 function sensei_custom_complete_lesson_text () {
 	$text = "Mark Lesson Complete";

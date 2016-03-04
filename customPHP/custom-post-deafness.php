@@ -31,15 +31,18 @@ $page_template = woo_get_page_template();
 <?php
 	woo_loop_before();
 	
-		if (have_posts()) { $count = 0;
-			while (have_posts()) { the_post(); $count++;
-				woo_get_template_part( 'content', 'page' ); // Get the page content template file, contextually.
+		if (have_posts()) {
+			$count = 0;
+			while (have_posts()) {
+				the_post();
+				$count++;
+				woo_get_template_part('content', 'page'); // Get the page content template file, contextually.
 			}
 		}
 		
 		// WP_Query arguments
-		$args = array (
-			'post_type'              => array( 'resources_post' ),
+		$args = array(
+			'post_type'              => array('resources_post'),
 			'category_name'          => 'deafness-post',
 			'order'                  => 'ASC',
 			'orderby'                => 'title',
@@ -47,11 +50,11 @@ $page_template = woo_get_page_template();
 		);
 
 		// The Query
-		$query = new WP_Query( $args );
+		$query = new WP_Query($args);
 
 		// The Loop
-		if ( $query->have_posts() ) {
-			while ( $query->have_posts() ) {
+		if ($query->have_posts()) {
+			while ($query->have_posts()) {
 				$query->the_post();
 				echo '<div class="entry-content">';
 		  		the_content();
@@ -72,9 +75,9 @@ $page_template = woo_get_page_template();
 
 		</div><!-- /#main-sidebar-container -->
 		<!---Added by nomad for widget area-->
-		<?php if ( is_active_sidebar( 'resource_page' ) ) : ?>
+		<?php if (is_active_sidebar('resource_page')) : ?>
 			<aside id="resourceSidebarNav" class="primary-sidebar widget-area leftColNav" role="complementary">
-				<?php dynamic_sidebar( 'resource_page' ); ?>
+				<?php dynamic_sidebar('resource_page'); ?>
 			</aside><!-- #primary-sidebar -->
 		<?php endif; ?>
 

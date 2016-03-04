@@ -244,8 +244,6 @@ jQuery(document).ready(function($) {
 		active: false
 	}); //end accordion
 	/////////////////////////////// Agencies & Advocates
-	 
-	
 	$('.agenciesAdvoNAVDiv h4').on('click', function(evnt) {
 		evnt.preventDefault();
 		agenciesAdvocatesClickEvent();
@@ -309,7 +307,7 @@ jQuery(document).ready(function($) {
             },'linear');
             $accordionH3.addClass('clicked');
         }
-    }); // end $('#disabilityCategoriesPage h3').on('click'.....
+    }); // end $accordionH3.on('click', function(evnt)
     // Test grabbing ::after
     ////////////////////////////////////////////////////////////////////
 /////////////// This is going to be the Navigation area animations for the Instructional Support Pages 

@@ -1,30 +1,36 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: Nomad_Mystic
- * Date: 1/26/2016
- * Time: 5:33 PM
+ * @package WooFramework
+ * @subpackage Template
  */
 
+global $woo_options, $wp_query;
+get_header();
+$page_template = woo_get_page_template();
+
+?>
+     <!-- #content Starts -->
+<?php woo_content_before(); ?>
+
+<?php if ((isset($woo_options['woo_slider_biz'] ) && 'true' == $woo_options['woo_slider_biz'] ) && ( isset( $woo_options['woo_slider_biz_full'] ) && 'true' == $woo_options['woo_slider_biz_full'] ) ) { $saved = $wp_query; woo_slider_biz(); $wp_query = $saved; } ?>
 
 
-//$page_href = $_GET['pageHref'];
-//$page_href = 'pageHref';
-//var_dump($page_href);
 
+<?php woo_main_before(); ?>
+<?php woo_main_after(); ?>
+<?php woo_content_after(); ?>
+<?php get_footer(); ?>
+
+
+<?php
 function pageCreation()
 {
-     $testing_text = '<p>Testing Paragraph</p>';
-     $category_name = 'traumatic-brain-injury-post';
-
-     if (have_posts()) {
-          $count = 0;
-          while (have_posts()) {
-               the_post();
-               $count++;
-               woo_get_template_part('content', 'page'); // Get the page content template file, contextually.
-          }
-     }
+//     get_header();
+     $category_name = $_GET['pageHref'];
+//     $testing_text = '<p>Testing Paragraph</p>';
+//     $category_name = $page_href;
+     $output = [];
      // WP_Query arguments
      $args = array(
           'post_type'              => array('resources_post'),
@@ -33,26 +39,23 @@ function pageCreation()
           'orderby'                => 'title',
           'posts_per_page'         =>  '-1'
      );
-
-
-     function buildPosts()
-     {
-          // The Query
-          $query = new WP_Query($args);
-          // The Loop
-          if ($query->have_posts()) {
-               while ($query->have_posts()) {
-                    $query->the_post();
-                    echo '<div class="entry-content">';
-                    the_content();
-                    echo '</div>';
-               }
+     // The Query
+     $query = new wp_query($args);
+     // The Loop
+     if ($query->have_posts()) {
+          while ($query->have_posts()) {
+               $query->the_post();
+               $individual_post = '';
+               $individual_post .= '<div class="entry-content">';
+               $individual_post .= the_content();
+               $individual_post .= '</div>';
+               array_push($output, $individual_post);
           }
-
      }
-     return $testing_text;
+     return 'Testing string';
 }
 
 $testing_text = pageCreation();
 
 echo json_encode($testing_text);
+?>

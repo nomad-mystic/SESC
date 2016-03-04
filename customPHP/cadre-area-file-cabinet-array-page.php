@@ -31,11 +31,11 @@ $page_template = woo_get_page_template();
 	woo_loop_before();
 		
 	if( current_user_can('author') || current_user_can('administrator') || current_user_can('editor') ) {
-   		
-   		
    		if (have_posts()) { $count = 0;
-			while (have_posts()) { the_post(); $count++;
-				woo_get_template_part( 'content', 'page-template-business' ); // Get the page content template file, contextually.
+			while (have_posts()) {
+				the_post();
+				$count++;
+				woo_get_template_part('content', 'page-template-business'); // Get the page content template file, contextually.
 			}
 		}
 	} 

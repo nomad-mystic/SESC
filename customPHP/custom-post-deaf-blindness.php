@@ -78,9 +78,9 @@ $page_template = woo_get_page_template();
 		<!---Added by nomad for widget area-->
 		
 		
-		<?php if ( is_active_sidebar( 'resource_page' ) ) : ?>
+		<?php if (is_active_sidebar('resource_page')) : ?>
 			<aside id="resourceSidebarNav" class="primary-sidebar widget-area leftColNav" role="complementary">
-				<?php dynamic_sidebar( 'resource_page' ); ?>
+				<?php dynamic_sidebar('resource_page'); ?>
 			</aside><!-- #primary-sidebar -->
 		<?php endif; ?>
 
