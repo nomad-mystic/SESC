@@ -1,0 +1,1029 @@
+/*--------------Nomad Notes
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=35n0I0kmLpBdkAJiBtjqoluuNgD */
+
+/* Feel free to copy&paste color codes to your application */
+
+/* As hex codes */
+
+.color-primary-0 { color: #B4345F } /* Main Primary color */
+.color-primary-1 { color: #E686A7 }
+.color-primary-2 { color: #CE567F }
+.color-primary-3 { color: #971B44 }
+.color-primary-4 { color: #75042A }
+
+.color-secondary-1-0 { color: #247D77 } /* Main Secondary color (1) */
+.color-secondary-1-1 { color: #66AEA9 }
+.color-secondary-1-2 { color: #3C9089 }
+.color-secondary-1-3 { color: #126963 }
+.color-secondary-1-4 { color: #03514C }
+
+.color-secondary-2-0 { color: #CCCA3B } /* Main Secondary color (2) */
+.color-secondary-2-1 { color: #FFFE95 }
+.color-secondary-2-2 { color: #EAE862 }
+.color-secondary-2-3 { color: #ABA91E }
+.color-secondary-2-4 { color: #858305 }
+
+
+
+/* As RGBa codes */
+
+.rgba-primary-0 { color: rgba(180, 52, 95,1) }  /* Main Primary color */
+.rgba-primary-1 { color: rgba(230,134,167,1) }
+.rgba-primary-2 { color: rgba(206, 86,127,1) }
+.rgba-primary-3 { color: rgba(151, 27, 68,1) }
+.rgba-primary-4 { color: rgba(117,  4, 42,1) }
+
+.rgba-secondary-1-0 { color: rgba( 36,125,119,1) }  /* Main Secondary color (1) */
+.rgba-secondary-1-1 { color: rgba(102,174,169,1) }
+.rgba-secondary-1-2 { color: rgba( 60,144,137,1) }
+.rgba-secondary-1-3 { color: rgba( 18,105, 99,1) }
+.rgba-secondary-1-4 { color: rgba(  3, 81, 76,1) }
+
+.rgba-secondary-2-0 { color: rgba(204,202, 59,1) }  /* Main Secondary color (2) */
+.rgba-secondary-2-1 { color: rgba(255,254,149,1) }
+.rgba-secondary-2-2 { color: rgba(234,232, 98,1) }
+.rgba-secondary-2-3 { color: rgba(171,169, 30,1) }
+.rgba-secondary-2-4 { color: rgba(133,131,  5,1) }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*------------------End CSS rest---*/
+
+
+/*----------------Helper Classes--*/
+a:link {
+     text-decoration: none !important;
+
+}
+a :visited {
+    text-decoration: none !important;
+}
+a:hover {
+     text-decoration: none !important;
+}
+a:active {
+     text-decoration: none !important;
+}
+.clearBoth {
+    clear: both;
+}
+.centerText {
+   text-align: center;
+}
+.rightText {
+    text-align: right;
+}
+.floatRight {
+  float: right;
+}
+.floatLeft {
+  float: left;
+}
+.text-indent-50px {
+    text-indent: 25px;
+}
+.font-weight-bold {
+    font-weight: bold;
+}
+.removeBorder {
+    border: none !important;
+}
+.removeMarginBottom {
+    margin-bottom: 0 !important;
+}
+.removeMargin {
+    margin: 0 0 0 0 !important;
+}
+.addLiteMarginTop {
+    margin-top: 2%;
+}
+/*---------Header Classes--*/
+/*.resourceHeaderH2 {
+    background: #B4345F;
+        color: #fff;
+        padding: .5em;
+        text-indent: 5%;
+        border-radius: 2px;
+    
+}*/
+.resourcePageLinkButton {
+    background-color: #1E9C8B;
+        border-radius: 2px;
+    transition: all .25s ease;
+}
+.resourcePageLinkButton a:hover {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.25);
+    color: #fff;
+}
+.resourcePageLinkButton a:active {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.5);
+    border-radius: 2px;
+}
+.resourcePageLinkButton a:visited {
+    color: #fff;
+}
+.resourcePageLinkButton a {
+    color: #fff;
+    padding: 1em;
+    display: block;
+}
+.resourcePageLinkButton a:before {
+    padding-right: 3%;
+        vertical-align: top;
+    font-size: .75em;
+}
+.currentLeftNavItem {
+    background: #01939a !important;
+    color: #fff !important;
+}
+/*------------------------------buttons Class-----*/
+.pagesButton {
+    background: #aaa;
+        padding: .5em;
+        width: 50%;
+    margin: 0 auto;
+        border-radius: 3px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.pagesButton:hover {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.10);
+}
+.pagesButton p {
+    margin: 0;
+    color: #000;
+}
+.formSidebarButton {
+        width: 90%;
+        margin: 10% auto 0;
+    text-align: center;
+        background: #01939a;
+        border-radius: 2px;
+    transition: all .25s ease;
+}
+.formSidebarButton:hover {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.25);
+}
+.formSidebarButton:active {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.50);
+}
+.formSidebarButton a {
+    display: block;
+        padding: 1em;
+        color: #fff;
+        font-size: 1.5em;
+}
+.formSidebarButton a:hover {
+    color: #fff;
+}
+.formSidebarButton a:active {
+    color: #fff;
+}
+/*--------for icons----------*/
+@font-face {
+    font-family: FontAwesome;
+}
+[data-icon]:before {
+  font-family: FontAwesome;
+  content: attr(data-icon);
+  speak: none; 
+}
+/*-----This is for the left side nav---*/
+.navIconLevelOne {
+    padding-right: 5%;
+}
+.navIconLevelTwo {
+    padding-right: 5%;
+}
+/*------pages icons-----*/
+.resourcesPageInnerContent .fa {
+    display: block;
+        margin: 2% auto;
+        width: 40%;
+        font-size: 10em;
+}
+/*----------------this is flaticon----*/
+@font-face {
+    font-family: "Flaticon";
+    src: url("fonts/flaticon.eot");
+    src: url("fonts/flaticon.eot#iefix") format("embedded-opentype"),
+    url("fonts/flaticon.woff") format("woff"),
+    url("fonts/flaticon.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: inherit;
+    font-style: normal;
+}.flaticon-arrow165:before {
+    content: "\e000";
+}
+.flaticon-family11:before {
+    content: "\e001";
+}
+.flaticon-folder63:before {
+    content: "\e002";
+}
+.flaticon-gears6:before {
+    content: "\e003";
+}
+.flaticon-government1:before {
+    content: "\e004";
+}
+.flaticon-right39:before {
+    content: "\e005";
+    font-size: 1em;
+    vertical-align: middle;
+}
+.flaticon-scales1:before {
+    content: "\e006";
+}
+.flaticon-school3:before {
+    content: "\e007";
+}
+
+/*------------------general Styles-*/
+p {
+    color: #000;
+}
+/*--------------------------------Header Area----*/
+#header {
+    /*----background: url('http://specialeducationsupportcenter.net/wp-content/uploads/2015/08/headerFamilyMontains.png') no-repeat bottom right;---*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#nomadHeader {
+    width: 90%;
+        margin: 0 auto;
+}
+#header .headerLogo {
+    margin: 0 auto 1%;
+}
+#header .headerLogo img {
+    margin: 0 auto;
+        display: block;
+}
+#header .headerh1 {
+    margin: 0 1% 1%;
+}
+#header .headerh1 h1 {
+    font-size: 2.5em;
+} 
+#header .headerh1 h3 {
+    margin: 1%;
+        font-size: 1.25em;
+        font-style: italic;
+} 
+#header .headerSocialMediaLogin {
+    width: 25%;
+    margin: 2% 0 0 0;
+}
+#header .headerSocialMediaLogin > ul {
+    float: left;
+    margin: 0 0 0 15%;
+}
+#header .headerSocialMediaLogin > ul li {
+    display: inline-block;
+}
+#header .headerSocialMediaLogin > ul li a {
+
+}
+#header .headerSocialMediaLogin > ul li a img{
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px #fff;
+    transition: box-shadow .25s ease;
+}
+#header .headerSocialMediaLogin > ul li a img:hover {
+    box-shadow: 0px 0px 3px 1px #000;
+}
+/*----Home page--*/
+#homePage {
+
+}
+.homePageHeaderImg img {
+    min-width: 100%;
+    border: none;
+    background: none;
+    height: auto;
+    padding: 0;
+}
+.homePageResourceBanner {
+    margin: 3% auto 0;
+    width: 90%;
+    text-align: center;
+}
+.homePageResourceBanner p {
+    display: none !important;
+}
+.homePageResourceBanner::before {
+    content: url('http://specialeducationsupportcenter.net/wp-content/uploads/2015/08/homepPageResourcesBannerLeft.png');
+    vertical-align: -100%;
+}
+.homePageResourceBanner::after {
+    content: url('http://specialeducationsupportcenter.net/wp-content/uploads/2015/08/homepPageResourcesBannerRight.png');
+    vertical-align: -100%;
+}
+#homePage .bannerFonts {
+    font-size: 4em;
+        color: #000;
+    display: inline-block;
+        text-align: center;
+    margin: 0 0 0 3%;
+        vertical-align: bottom;
+}
+#homePage #homeResources .bannerFonts::before {
+    content: "";
+        display: block;
+        background: url('http://specialeducationsupportcenter.net/wp-content/uploads/2015/08/homePageResourcesIcon.png') no-repeat;
+        width: 85px;
+    height: 85px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+#homePage .homeResourceIcons {
+
+}
+#homePage .homeResourceIcons img {
+    width: 75%;
+    border-radius: 50%;
+        border: 10px solid #1e9c8b;
+    box-shadow: 0px 0px 0px 0px #000;
+    transition: box-shadow .25s ease;
+}
+#homePage .homeResourceIcons img:hover {
+    box-shadow: 0px 0px 10px 0px #000;
+}
+/*----This starts the flipper class------*/
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+.flip-container {
+    float: left;
+        width: 23%;
+    height: 250px;
+    margin: 2% 1%;
+}
+.homeResourceFlippers:nth-child(2),
+.homeResourceFlippers:nth-child(4) {
+
+}
+.homeResourceFlippers:nth-child(2) .flip-container:nth-child(odd) .front,
+.homeResourceFlippers:nth-child(4) .flip-container:nth-child(even) .front {
+    background: #3C9089;
+}
+.homeResourceFlippers:nth-child(4) .flip-container:nth-child(odd) .front {
+    background: #B4345F;
+}
+.homeResourceFlippers:nth-child(2) .flip-container:nth-child(even) .front {
+    background: #EAE862;
+}
+.homeResourceFlippers:nth-child(2) .flip-container:nth-child(even) .front h3
+ {
+    color: #000;
+}
+.flip-container img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    background: transparent;
+    padding-top: 10%;
+        border: none;
+}
+.flip-container h3 {
+    text-align: center;
+    font-size: 1.25em;
+    color: #fff;
+}
+.flip-container .pagesButton {
+    margin-top: 30%;
+}
+.front, .back { 
+    width: 100%;
+    background: #fff;
+
+}
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background: #aaa;
+}
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    border: rgba(0,0,0,.10) solid 2px;
+}
+.back a {
+    display: block;
+    padding: .5em;
+}   
+.back p {
+    padding: 0 10%;
+        margin: 5% 0 0 0;
+}
+.back p:nth-child(2) {
+    display: none;
+}
+.back p:nth-child(2) a{
+    display: none;
+}
+/*---------------------------------------------------------#aboutPage---*/
+#aboutPage {
+    margin: 2% auto;
+}
+#aboutPage address {
+    font-size: 1.25em; 
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+}
+#aboutPage p {
+    font-size: 1.25em; 
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+}
+/*-----aboutPage parent content pages----*/
+.aboutPageParentPage h2 {
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+    font-size: 2.25em;
+}
+.aboutPageParentPage P {
+    background: rgba(0,0,0,.10);
+    padding: 2%;
+    border-radius: 4px;
+        font-size: 1.25em;
+}
+/*--------------------------------------------------------#biosPage----*/
+#biosPage {
+    margin: 2% auto;
+}
+#biosPage h2 {
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+    font-size: 2.25em;
+}
+#biosPage h2 a {
+    display: block;
+}
+#biosPage p {
+    font-size: 1.25em; 
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+}
+/*---------------------------------------------------------------#closingTheGAP-----*/
+#closingTheGAP h2 {
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+    font-size: 2.25em;
+}
+#closingTheGAP p {
+    font-size: 1.25em; 
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+}
+#closingTheGAP p ul {
+    padding: 2%;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+}
+/*------------------------------------------------#contactPage---*/
+#contactPage {
+    margin: 7% auto;
+}
+#contactPage P {
+    float: right;
+        width: 56%;
+}
+/*-------------------------------------#resourcesPage---*/
+
+
+#resourcesPage .resourcesPageInnerContent {
+    width: 100%;
+        margin: 0 auto;
+        display: block;
+    
+} 
+#resourcesPage .resourcesPageInnerContent h5{
+    text-align: center;
+        font-size: 1.25em;
+    color: #fff;
+} 
+#resourcesPage .resourcesPageInnerContent .floatLeft {
+    width: 30%;
+        margin: 5% 1%;
+    background: #01939a;
+    border-radius: 4px;
+
+} 
+#resourcesPage .resourcesPageInnerContent img {
+    padding: 15%;
+    border: none;
+    background: #F8F8F8;
+    margin: 0 auto;
+        display: block;
+}
+/*----resource side bar---*/
+#resourceSidebar {
+    margin: 10% auto 0;
+}
+#resourceSidebar img {
+    margin: 0 auto;
+        display: block;
+    width: 90%;
+}
+/*-------------------------------------resourcePageParentContent----*/
+.resourcePageParentContent h2 {
+    background: rgba(255,118,0,.75);
+        color: #fff;
+        padding: .5em;
+        text-indent: 1%;
+        border-radius: 2px;
+    font-size: 2.25em;
+}
+.resourcePageParentContent h3 {
+    background: rgba(0,0,0,.25);
+        color: #000;
+        padding: .5em;
+        text-indent: 5%;
+        border-radius: 2px;
+    margin: 5% 0 2% 0;
+}
+.resourcePageParentContent h4 {
+    background-color: #1E9C8B;
+        border-radius: 2px;
+    color: #fff;
+    display: block;
+    transition: all .25s ease;
+}
+.resourcePageParentContent h4:hover {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.25);
+    color: #fff;
+}
+.resourcePageParentContent h4:active {
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,.5);
+}
+.resourcePageParentContent h4 a:visited {
+    color: #fff;
+}
+.resourcePageParentContent h4 a:hover {
+    color: #fff;
+}
+.resourcePageParentContent a {
+    color: #fff;
+    display: block;
+    padding: 1em;
+}
+.resourcePageParentContent h4 a:before {
+    font-family: Flaticon;
+    content: "\e000";
+    padding-right: 3%;
+        vertical-align: top;
+    font-size: .75em;
+}
+.resourcePageParentContent p {
+    padding: 2% 5% 3%;
+    background-color: rgba(0,0,0,.05);
+        border-radius: 2px;
+    font-size: 1.25em;
+    color: #000;
+}
+.resourcePageParentContent p a {
+    display: inline-block;
+    color: #428bca;
+    padding: 0;
+}
+.resourcePageParentContent ul li a {
+    display: inline-block;
+        padding: 0;
+        color: darkblue;
+}
+/*--end--*/
+/*--------------------------------------------disabilityParentPage----*/
+
+.disabilityDefinedParentPage h3 {
+    background-color: rgba(180,52,95,.8);
+        padding: .5em;
+    width: 90%;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.75em;
+        border-radius: 2px;
+}
+.disabilityDefinedParentPage h4 {
+    background-color: #1E9C8B;
+        border-radius: 2px;
+    color: #fff;
+    display: block;
+    transition: all .25s ease;
+}
+.disabilityDefinedParentPage h4:hover {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.25);
+    color: #fff;
+}
+.disabilityDefinedParentPage h4:active {
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,.5);
+}
+.disabilityDefinedParentPage h4 a:visited {
+    color: #fff;
+}
+.disabilityDefinedParentPage h4 a:hover {
+    color: #fff;
+}
+.disabilityDefinedParentPage a {
+    color: #fff;
+    display: block;
+    padding: 1em;
+}
+.disabilityDefinedParentPage h4 a:before {
+    font-family: Flaticon;
+    content: "\e000";
+    padding-right: 3%;
+        vertical-align: top;
+    font-size: .75em;
+}
+.disabilityDefinedParentPage p {
+    font-size: 1.25em;
+    padding: 2% 5% 3%;
+}
+.disabilityDefinedParentPage p a {
+    display: block;
+    padding: 0;
+    color: #428bca;
+}
+.disabilityCategoriesAccordion div {
+    padding: 2%;
+        width: 90%;
+        background: rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+}
+/*--------.disabilityPage {
+    margin-top: 4%;
+}
+.disabilityPage p {
+    padding: 2% 5% 3%;
+    background-color: rgba(0,0,0,.05);
+        border-radius: 2px;
+    font-size: 1.25em;
+}----*/
+/*-------------------------------------disabilityPageContent--*/
+.disabilityPageContent h2 {
+    background: #B4345F;
+        color: #fff;
+        padding: .5em;
+        text-indent: 5%;
+        border-radius: 2px;
+    font-size: 2.25em;
+}
+.disabilityPageContent h4 {
+    background-color: #1E9C8B;
+        border-radius: 2px;
+    color: #fff;
+    display: block;
+    transition: all .25s ease;
+}
+.disabilityPageContent h4 a:before {
+    font-family: Flaticon;
+    content: "\e000";
+    padding-right: 3%;
+        vertical-align: top;
+    font-size: .75em;
+}
+
+.disabilityPageContent h4:hover {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.25);
+    color: #fff;
+}
+.disabilityPageContent h4:active {
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,.5);
+    color: #fff;
+}
+.disabilityPageContent h4 a:visited {
+    color: #fff;
+}
+.disabilityPageContent h4 a:hover {
+    color: #fff !important;
+}
+.disabilityPageContent h4 a {
+    color: #fff;
+    display: block;
+    padding: 1em;
+}
+.disabilityPageContent h4 a:before {
+    font-family: Flaticon;
+    content: "\e000";
+    padding-right: 3%;
+        vertical-align: top;
+    font-size: .75em;
+}
+.disabilityPageContent p {
+    padding: 2% 5% 3%;
+    background-color: rgba(0,0,0,.05);
+        border-radius: 2px;
+    font-size: 1.25em;
+}
+.disabilityPageContent ul li a {
+    background-color: #1E9C8B;
+        border-radius: 2px;
+    color: #fff;
+    padding: 1em;
+    display: block;
+    margin: 2%;
+    transition: all .25s ease;
+}
+.disabilityPageContent ul {
+    list-style-type: none;
+}
+.disabilityPageContent ul li {
+    list-style-type: none;
+}
+.disabilityPageContent ul li a:before {
+    font-family: Flaticon;
+    content: "\e000";
+    padding-right: 3%;
+        vertical-align: top;
+    font-size: .75em;
+}
+/*--------------end---------------*/
+/*-------------instructional Page----*/
+.instructionalParentPageContent h2 {
+        padding: .5em;
+        background-color: rgba(180,52,95,.8);
+        margin: 2% auto;
+        border-radius: 2px;
+        font-size: 2.25em;
+        color: #fff;
+}
+
+.instructionalParentPageContent h3 {
+    font-size: 1.5em;
+        background-color: rgba(0,0,0,.10);
+        padding: .5em;
+        border-radius: 2px;
+}
+.instructionalParentPageContent p {
+    padding: 2%;
+        font-size: 1.25em;
+        line-height: 1.25em;
+        background: rgba(0, 0, 0, 0.10);
+    border-radius: 2px;
+}
+.instructionalParentPageContent .accordion h3 {
+    background-color: rgba(180,52,95,.8);
+     padding: .5em;
+        width: 90%;
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.75em;
+        border-radius: 2px;
+}
+.instructionalParentPageContent .accordion p {
+    padding: 2%;
+        font-size: 1.5em;
+        width: 90%;
+        line-height: 1.25em;
+        background: rgba(0, 0, 0, 0.10);
+}
+/*----------------------------formPage-------*/
+#formPage {
+    margin: 10% auto;
+        display: block;
+    width: 90%;
+}
+#formPage > div {
+    margin: 10% auto;
+        display: block;
+        width: 90%;
+}
+#formPage > div p {
+    margin-left: 15%;
+}
+/*------------------------------.resourcePostPage-------*/
+.resourcePostPage {
+    margin: 2% auto 0 2%;
+}
+.resourcePostPage h2 {
+    background: rgba(255,118,0,.75);
+        padding: 1% 1% 1% 3%;
+        border-radius: 2px;
+    font-size: 2.5em;
+    padding: .5em;
+    margin: 0 auto;
+}
+.resourcePostPage h3 {
+    margin: 4% auto 2%;
+        background-color: rgba(180,52,95,.8);
+    color: #fff;
+        padding: .5em;
+        font-size: 1.75em;
+        border-radius: 2px;
+}
+.resourcePostPage h4 {
+    background: #01939a;
+        padding: 2% 2% 2% 3%;
+        border-radius: 2px;
+    font-size: 2em;
+    transition: all .5s ease;
+}
+.resourcePostPage h4:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,.20);
+}
+.resourcePostPage h4:active {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.50);
+}
+.resourcePostPage a:before {
+    font-family: FontAwesome;
+    content: "\f08e";
+    speak: none;
+    display: inline-block;
+    padding-right: 3%;
+    vertical-align: middle;
+    vertical-align: baseline;
+        font-size: .90em;
+}
+.resourcePostPage a {
+    display: block;
+    color: #fff;
+}
+.resourcePostPage a:hover {
+    color: #fff;
+}
+.resourcePostPage a:visited {
+    color: #fff;
+}
+.resourcePostPage p a {
+    display: inline;
+    color: #428bca;
+}
+.resourcePostPage p a:hover {
+    color: #2a6496;
+}
+.resourcePostPage  p {
+    padding: 2%;
+        background: rgba(0,0,0,.10);
+    border-radius: 2px;
+    font-size: 1.5em;
+}
+.resourcePostPage .entry-utility {
+    display: none;
+}
+.resourcePostPage .entry-title {
+    display: none;
+}
+.resourcePostPage .entry-content {
+    margin: 6% auto;
+}
+/*--------------widgets-*/
+/*----------------------------custom widgets-*/
+.leftColNav {
+    width: 20%;
+    margin: 2% 1%;
+}
+.leftColNav h4 {
+    padding: 1em 1em 1em .5em;
+        color: #000;
+        font-size: 1em;
+        margin: .25em 0;
+    background: #fff;
+    border-radius: 2px; 
+    transition: all .25s ease;
+}
+.leftColNav h4:hover {
+    background: #01939a;
+    color: #fff;    
+}
+.leftColNav .navDivLevelTwoItem {
+    display: block;
+        font-size: 1em;
+        color: #000;
+        padding: 2% 2% 2% 5%;
+        background-color: #ffffff;
+    margin: 2% 0 2% 3%;
+    border-radius: 2px;
+    tranistion: all .25s ease
+    
+}
+.leftColNav .navDivLevelTwoItem:hover {
+    background: #01939a;
+    color: #fff;
+
+}
+.leftColNav .navDivLevelTwoItem a {
+    color: #000000;
+    width: 100%;
+}
+
+#resourcePageNav > div {
+    margin: 1% auto;
+}
+.aboutPageLeftNAV > div {
+    margin: 1% auto;
+}
+/*--------------Media ------*/
+@media only screen and (min-width: 980px) {
+    #wrapper {
+        padding: 0 0 0 0;
+    }
+    .three-col-middle #main-sidebar-container #sidebar {
+        width: 25%;
+    }
+        .three-col-middle #main-sidebar-container #main {
+        width: 71%;
+            display: block;
+        margin: 2%;
+    }
+    .three-col-middle #main-sidebar-container {
+        width: 79%;
+    }
+} /*-----end min-width 980----*/
+@media only screen and (max-width: 979px) {
+    #resourceSidebarNav {
+        width: 100%;
+    }
+    #resourcesPage .resourcesPageInnerContent .floatLeft {
+        width: 75%;
+            float: none;
+            margin: 2% auto;
+            padding: 0 0 2% 0;
+    }
+}/*-----end max-width 980----*/
+
+
+/*---------------animations------*/

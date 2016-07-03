@@ -171,7 +171,6 @@ jQuery(document).ready(function($) {
 	}); // end click
 	// For the H4
 	var IDEANavClickEvent = function() {
-		
 		if($IDEANavDiv.hasClass('clicked')) {
 			$('#resourcePageNav .IDEANavDiv h4 span.floatRight').animate({  borderSpacing: 0 }, {
 			    step: function(now, fx) {
@@ -462,7 +461,7 @@ jQuery(document).ready(function($) {
         var suggestResourceForm = $('.suggestResourceForm');
         var askQuestion = $('.askQuestion');
         var signUpWEA = $('.signUpWEA');
-
+		var sidebarHandbook = $('.sidebarHandbook');
         //console.log(siteHref + " THis is the site heft");
         //console.log(siteHref.length + 'This is the length of the siteHref');
         //console.log(sitePathname + ' THis is the Path name');
@@ -482,6 +481,7 @@ jQuery(document).ready(function($) {
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
         }
         // this only shows on one page training
         if (sitePathname === '/instructional-support/training/') {
@@ -494,6 +494,7 @@ jQuery(document).ready(function($) {
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
 
         } else if(slicedIDEAPath === '/idea/') {
             var IDEAImagePath = 'http://specialeducationsupportcenter.org/wp-content/uploads/2015/10/IDEA.jpg';
@@ -501,6 +502,7 @@ jQuery(document).ready(function($) {
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
 
         } else if(slicedDisabilityPath === '/disability-categories/') {
             var disabilityImagePath = 'http://specialeducationsupportcenter.org/wp-content/uploads/2015/10/disabilityCategories.jpg';
@@ -508,6 +510,7 @@ jQuery(document).ready(function($) {
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
 
         } else if(slicedAgenciesAdvosPath === '/agencies-advocates/') {
             var agenciesAdvosImagePath = 'http://specialeducationsupportcenter.org/wp-content/uploads/2015/10/agenciesAdvos.jpg';
@@ -515,24 +518,30 @@ jQuery(document).ready(function($) {
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
+
         } else if(slicedStateNeedsPath === '/state-needs-projects/') {
             var stateNeedsImagePath = 'http://specialeducationsupportcenter.org/wp-content/uploads/2015/10/stateNeedProjects.jpg';
             image.src = stateNeedsImagePath;
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
+
         } else if(slicedFamiliesResources === '/resources-families/') {
             var familiesImagePath = 'http://specialeducationsupportcenter.org/wp-content/uploads/2015/11/supportForFamilies.jpg';
             image.src = familiesImagePath;
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
         } else if(slicedStudentsResources === '/resources-students/') {
             var studentsImagePath = 'http://specialeducationsupportcenter.org/wp-content/uploads/2015/10/supportForStudents.jpg';
             image.src = studentsImagePath;
 
             suggestResourceForm.css('display', 'block');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
         } else {
             image.src = 'http://specialeducationsupportcenter.org/wp-content/uploads/2015/10/kidsForLogo.jpg';
             image.alt = 'This is an illustration of three kid playing from Special Education Support Center Logo';
@@ -544,6 +553,7 @@ jQuery(document).ready(function($) {
 
             suggestResourceForm.css('display', 'none');
             askQuestion.css('display', 'block');
+			sidebarHandbook.css('display', 'block');
         }
     } // end function
     sidebarElementSwap();

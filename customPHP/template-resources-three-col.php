@@ -30,8 +30,11 @@ $page_template = woo_get_page_template();
 <?php
 	woo_loop_before();
 
-	if ( have_posts() ) { $count = 0;
-		while ( have_posts() ) { the_post(); $count++;
+	if (have_posts()) {
+		$count = 0;
+		while (have_posts()) {
+			the_post();
+			$count++;
 			woo_get_template_part( 'content', 'page-template-business' ); // Get the page content template file, contextually.
 		}
 	}
