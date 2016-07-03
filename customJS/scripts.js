@@ -557,6 +557,19 @@ jQuery(document).ready(function($) {
         }
     } // end function
     sidebarElementSwap();
+
+
+
+    // Start Google Analytics
+    var sidebarHandbook = $('.sidebarHandbook');
+    sidebarHandbook.on('click', function() {
+       console.log('handbook Clicked');
+        ga('send', 'event', {
+            'eventCategory': 'Handbook',
+            'eventAction': 'Link to Handbook in sidebar was clicked',
+            'eventLabel': 'Handbook Sidebar Link'
+        });
+    });
 }); // End Ready 
 
 ////////////////////////////////////// Not Needed for the site because thing have change in the way a user navigates through the site 
